@@ -1,0 +1,61 @@
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --fg: rgb(99, 99, 105);
+  --fg-strong: #24262b;
+  --muted: #7c7d84;
+  --border: #dee2e6;
+  --grid: #b8bbc0;
+  /* --primary fills selected buttons (white text on top); --primary-text is blue text/icons on surfaces */
+  --primary: #2b4364;
+  --primary-text: #2b4364;
+  --on-primary: #ffffff;
+  --primary-soft: #e6ecf4;
+  /* logo orange, for highlights such as favourites and the active tab */
+  --accent: #ed5c35;
+  /* buttons and inputs sit raised on the page; segmented controls use a recessed track */
+  --control-bg: #ffffff;
+  --control-border: #d3d8df;
+  --track: #e7eaee;
+  --shadow-raised: 0 1px 2px rgba(16, 24, 40, 0.08), 0 1px 1px rgba(16, 24, 40, 0.04);
+  --warning: #f2b705;
+  --danger: #d92344;
+  --chart-bg: #ffffff;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15181d;
+    --surface: #1e2229;
+    --fg: #b6b9c0;
+    --fg-strong: #eef0f3;
+    --muted: #8c9099;
+    --border: #343a44;
+    --grid: #4f5661;
+    --primary: #3d5f8f;
+    --primary-text: #8fb0e0;
+    --primary-soft: #26344a;
+    --chart-bg: #1e2229;
+    --control-bg: #242a33;
+    --control-border: #3b424e;
+    --track: #0e1115;
+    --shadow-raised: 0 1px 2px rgba(0, 0, 0, 0.45);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-tap-highlight-color: transparent;
+}
+button { cursor: pointer; }
+button:disabled { opacity: 0.5; }
+:focus-visible { outline: 2px solid var(--primary-text); outline-offset: 2px; }
